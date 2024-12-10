@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Fan Zone - 2024 NBA In Season Tournament Schedule</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/ist.avif'); /* Path to your background image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff; /* Ensures text is readable against the background */
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        .navbar li {
+            margin: 0 1rem;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        h2 {
+            background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        /* Grid Styling */
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Card Container */
+        .game-box {
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        /* Card Styling */
+        .card {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Flip Card */
+        .card.flip {
+            transform: rotateY(180deg);
+        }
+
+        /* Front and Back */
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-front {
+            background-color: rgba(30, 58, 86, 0.9); /* Dark semi-transparent blue */
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .card-back {
+            background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent black */
+            color: #fff;
+            transform: rotateY(180deg);
+            flex-direction: column;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        // Function to flip the card
+        function flipCard(cardId) {
+            const card = document.getElementById(cardId);
+            card.classList.toggle('flip');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>2024 NBA In Season Tournament Schedule</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="teams.html">Teams</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="schedule">
+        <h2>NBA In Season Tournament 2024: Group Play</h2>
+        <div class="game-grid">
+            <!-- Group Play Games -->
+            <div class="game-box" onclick="flipCard('game1')">
+                <div id="game1" class="card">
+                    <div class="card-front">
+                        Group A: Denver Nuggets vs. Phoenix Suns
+                    </div>
+                    <div class="card-back">
+                        <p><strong>Date:</strong> November 12, 2024</p>
+                        <p><strong>Time:</strong> 8:00 PM ET</p>
+                        <p><strong>Location:</strong> Ball Arena, Denver</p>
+                    </div>
+                </div>
+            </div>
+            <div class="game-box" onclick="flipCard('game2')">
+                <div id="game2" class="card">
+                    <div class="card-front">
+                        Group B: Golden State Warriors vs. Los Angeles Lakers
+                    </div>
+                    <div class="card-back">
+                        <p><strong>Date:</strong> November 14, 2024</p>
+                        <p><strong>Time:</strong> 10:00 PM ET</p>
+                        <p><strong>Location:</strong> Chase Center, San Francisco</p>
+                    </div>
+                </div>
+            </div>
+            <div class="game-box" onclick="flipCard('game3')">
+                <div id="game3" class="card">
+                    <div class="card-front">
+                        Group C: Boston Celtics vs. Miami Heat
+                    </div>
+                    <div class="card-back">
+                        <p><strong>Date:</strong> November 17, 2024</p>
+                        <p><strong>Time:</strong> 7:30 PM ET</p>
+                        <p><strong>Location:</strong> TD Garden, Boston</p>
+                    </div>
+                </div>
+            </div>
+            <div class="game-box" onclick="flipCard('game4')">
+                <div id="game4" class="card">
+                    <div class="card-front">
+                        Group D: Milwaukee Bucks vs. Philadelphia 76ers
+                    </div>
+                    <div class="card-back">
+                        <p><strong>Date:</strong> November 21, 2024</p>
+                        <p><strong>Time:</strong> 8:00 PM ET</p>
+                        <p><strong>Location:</strong> Fiserv Forum, Milwaukee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>NBA In Season Tournament 2024: Knockout Rounds</h2>
+        <div class="game-grid">
+            <!-- Quarterfinals -->
+            <div class="game-box" onclick="flipCard('quarter1')">
+                <div id="quarter1" class="card">
+                    <div class="card-front">
+                        Quarterfinal: Orlando Magic vs. Milwaukee Bucks
+                    </div>
+                    <div class="card-back">
+                        <p><strong>Date:</strong> December 10, 2024</p>
+                        <p><strong>Time:</strong> 7:00 PM ET</p>
+                        <p><strong>Location:</strong> Amway Center, Orlando</p>
+                    </div>
+                </div>
+            </div>
+            <div class="game-box" onclick="flipCard('quarter2')">
+                <div id="quarter2" class="card">
+                    <div class="card-front">
+                        Quarterfinal: Dallas Mavericks vs. Oklahoma City Thunder
+                    </div>
+                    <div class="card-back">
+                        <p><strong>Date:</strong> December 10, 2024</p>
+                        <p><strong>Time:</strong> 9:30 PM ET</p>
+                        <p><strong>Location:</strong> American Airlines Center, Dallas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="game-box" onclick="flipCard('quarter3')">
+                <div id="quarter3" class="card">
+                    <div class="card-front">
+                        Quarterfinal: Atlanta Hawks vs. New York Knicks
+                    </div>
+                    <div class="card-back">
+                        <p><strong>Date:</strong> December 11, 2024</p>
+                        <p><strong>Time:</strong> 7:30 PM ET</p>
+                        <p><strong>Location:</strong> State Farm Arena, Atlanta</p>
+                    </div>
+                </div>
+            </div>
+            <div class="game-box" onclick="flipCard('quarter4')">
+                <div id="quarter4" class="card">
+                    <div class="card-front">
+                        Quarterfinal: Houston Rockets vs. Golden State Warriors
+                    </div>
+                    <div class="card-back">
+                        <p><strong>Date:</strong> December 11, 2024</p>
+                        <p><strong>Time:</strong> 10:00 PM ET</p>
+                        <p><strong>Location:</strong> Toyota Center, Houston</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semifinals -->
+            <div class="game-box" onclick="flipCard('semi1')">
+                <div id="semi1" class="card">
+                    <div class="card-front">
+                        East Semifinal: Bucks/Magic vs. Knicks/Hawks
+                    </div>
+                    <div class="card-back">
+                        <p><strong>Date:</strong> December 14, 2024</p>
+                        <p><strong>Time:</strong> 7:00 PM ET</p>
+                        <p><strong>Location:</strong> T-Mobile Arena, Las Vegas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="game-box" onclick="flipCard('semi2')">
+                <div id="semi2" class="card">
+                    <div class="card-front">
+                        West Semifinal: Mavericks/Thunder vs. Rockets/Warriors
+                    </div>
+                    <div class="card-back">
+                        <p><strong>Date:</strong> December 14, 2024</p>
+                        <p><strong>Time:</strong> 9:30 PM ET</p>
+                        <p><strong>Location:</strong> T-Mobile Arena, Las Vegas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finals -->
+            <div class="game-box" onclick="flipCard('final')">
+                <div id="final" class="card">
+                    <div class="card-front">
+                        NBA Cup Final
+                    </div>
+                    <div class="card-back">
+                        <p><strong>Date:</strong> December 17, 2024</p>
+                        <p><strong>Time:</strong> 8:30 PM ET</p>
+                        <p><strong>Location:</strong> T-Mobile Arena, Las Vegas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 NBA Fan Zone. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
