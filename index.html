@@ -5,6 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NBA Fan Zone - Home</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styling for the Commercial Break Section */
+        .commercial {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .commercial h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .commercial iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .commercial p {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -21,16 +52,25 @@
     </header>
 
     <!-- Hero Section -->
-<!-- Hero Section -->
-<section class="hero" style="background: url('images/cleve.jpg') no-repeat center center/cover;">
-    <!-- Put image here -->
-    <div class="hero-overlay">
-        <h2>Welcome to The NBA Fan Zone *NEW* NBA IN SEASON TOURNAMENT EDITION</h2>
-        <p>Your ultimate NBA 2024 Experience for NBA teams, Schedules, and Information Begins Here!</p>
-        <button onclick="window.location.href='teams.html'">Click Here to see All 30 Active NBA Teams!</button>
-    </div>
-</section>
+    <section class="hero" style="background: url('images/cleve.jpg') no-repeat center center/cover;">
+        <div class="hero-overlay">
+            <h2>Welcome to The NBA Fan Zone *NEW* NBA IN SEASON TOURNAMENT EDITION</h2>
+            <p>Your ultimate NBA 2024 Experience for NBA teams, Schedules, and Information Begins Here!</p>
+            <button onclick="window.location.href='teams.html'">Click Here to see All 30 Active NBA Teams!</button>
+        </div>
+    </section>
 
+    <!-- Commercial Break Section -->
+    <section class="commercial">
+        <h3>Commercial Break!</h3>
+        <iframe 
+            src="https://www.youtube.com/embed/v9IpmuG9510" 
+            title="YouTube video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+        <p>Check out this amazing NBA moment on YouTube!</p>
+    </section>
 
     <!-- Featured Players Section -->
     <section class="featured">
