@@ -35,6 +35,48 @@
             font-size: 1rem;
             color: #555;
         }
+
+        /* Table Styling */
+        .table-section {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .table-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        table {
+            margin: 0 auto;
+            width: 80%;
+            border-collapse: collapse;
+            background-color: #fff;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        table th, table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        table th {
+            background-color: #1E3A56;
+            color: #fff;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f4f4f4;
+        }
+
+        table tr:hover {
+            background-color: #ddd;
+        }
     </style>
 </head>
 <body>
@@ -72,6 +114,53 @@
         <p>Check out this NBA In Season Tournament Highlight Mixtape from the 2023 NBA Season!</p>
     </section>
 
+    <!-- Table Section -->
+    <section class="table-section">
+        <h3>Top 5 Most Sold NBA Jerseys of All Time</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>Team</th>
+                    <th>Era</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Michael Jordan</td>
+                    <td>Chicago Bulls</td>
+                    <td>1990s</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>LeBron James</td>
+                    <td>Los Angeles Lakers / Cleveland Cavaliers / Miami Heat</td>
+                    <td>2000s-Present</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Kobe Bryant</td>
+                    <td>Los Angeles Lakers</td>
+                    <td>2000s</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Stephen Curry</td>
+                    <td>Golden State Warriors</td>
+                    <td>2010s-Present</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Shaquille O'Neal</td>
+                    <td>Los Angeles Lakers / Miami Heat</td>
+                    <td>1990s-2000s</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
     <!-- Featured Players Section -->
     <section class="featured">
         <h3>Featured NBA Moments</h3>
@@ -102,3 +191,4 @@
     </footer>
 </body>
 </html>
+
